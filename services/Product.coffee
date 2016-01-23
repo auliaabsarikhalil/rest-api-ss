@@ -115,9 +115,9 @@ class Product
 
 	###
 	========================================
-	|	@gene
+	|	@generateParamsUpdate
 	========================================	
-	|	constructor 
+	|	generate params update 
 	|	
 	|	@params
 	|	:keys 	Array
