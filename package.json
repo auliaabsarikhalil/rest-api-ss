@@ -1,0 +1,21 @@
+{
+  "name": "rest-api-ss",
+  "version": "1.0.0",
+  "description": "Restfull API with Express for SS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aulia-Absari Khalil <auliaabsarikhalil@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.14.2",
+    "coffee-script": "^1.10.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "mongojs": "^2.3.0",
+    "mongoose": "^4.3.6",
+    "settings": "^0.1.1"
+  }
+}
