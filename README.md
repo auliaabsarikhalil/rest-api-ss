@@ -6,20 +6,36 @@
 Before you run this application, there are several things need to be setup :
 
 1. clone this this repo `git clone https://github.com/auliaabsarikhalil/rest-api-ss.git`
-2. run `npm-install`
+2. [install and setup Mongo](https://docs.mongodb.org/manual)
+3. [install node and npm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
+4. run `npm-install`
+5. define your environtment at `.env` file (Simply just rename `.env.example` file)
+6. setup config at `config.coffee`
 
+```coffee
+module.exports =
+  common:
+    port: 1990
+    host:"localhost"
+    database: "sale_stock"
+
+  development:
+    mongo:
+      host : "localhost"
+      port : 27017
+```
 
 ## HOW TO RUN
 
-To run this application you just need to run a command `node app`
+To run this application you just need to run a command `node app` and begin to access it at `http://HOST:PORT`
 
 
-# API DOCUMENTATION
+## API DOCUMENTATION
 
 Below is the API Documentation for REST API SS
 
 
-# Categories
+## Categories
 
 ### List All Categories
 
@@ -166,7 +182,7 @@ Response `200`
   "data": {
     "category": {
       "ok": 1,
-      "nModified": 0,
+      "nModified": 1,
       "n": 1
     },
     "hierarchy": [
@@ -205,7 +221,7 @@ Response `200`
 }
 ```
 
-# PRODUCTS
+## PRODUCTS
 
 ### List All Products
 
