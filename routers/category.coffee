@@ -4,6 +4,17 @@ module.exports = (params) ->
 
 	###
 	========================================
+	|	@BASE_URL 
+	========================================	
+	|
+	|	Author		: Aulia
+	|	Last update	: 02 Feb 2016 by Aulia
+	###
+
+	BASE_URL = "categories"
+
+	###
+	========================================
 	|	[GET] /categories
 	========================================	
 	|	get list all catagories 
@@ -15,7 +26,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.get "/categories", (req, res, next) ->
+	app.get "/#{BASE_URL}", (req, res, next) ->
 
 		query =
 			deletedAt : null
@@ -37,7 +48,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.get "/categories/:id", (req, res, next) ->
+	app.get "/#{BASE_URL}/:id", (req, res, next) ->
 
 		id = helper.toObjectId req.params.id
 
@@ -78,7 +89,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.post "/categories", (req, res, next) ->
+	app.post "/#{BASE_URL}", (req, res, next) ->
 		
 		data = req.body
 		
@@ -126,7 +137,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.put "/categories/:id", (req, res, next) ->
+	app.put "/#{BASE_URL}/:id", (req, res, next) ->
 
 		id 	 = helper.toObjectId req.params.id
 		data = req.body
@@ -179,7 +190,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.delete "/categories/:id", (req, res, next) ->
+	app.delete "/#{BASE_URL}/:id", (req, res, next) ->
 		
 		query =
 			_id: helper.toObjectId req.params.id

@@ -4,6 +4,17 @@ module.exports = (params) ->
 
 	###
 	========================================
+	|	@BASE_URL 
+	========================================	
+	|
+	|	Author		: Aulia
+	|	Last update	: 02 Feb 2016 by Aulia
+	###
+
+	BASE_URL = "products"
+
+	###
+	========================================
 	|	[GET] /products
 	========================================	
 	|	get list all product 
@@ -15,7 +26,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.get "/products", (req, res, next) ->
+	app.get "/#{BASE_URL}", (req, res, next) ->
 
 
 		async.waterfall [
@@ -55,7 +66,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.get "/products/:id", (req, res, next) ->
+	app.get "/#{BASE_URL}/:id", (req, res, next) ->
 
 		async.waterfall [
 
@@ -93,7 +104,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.post "/products", (req, res, next) ->
+	app.post "/#{BASE_URL}", (req, res, next) ->
 		
 		data = req.body
 
@@ -134,7 +145,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.put "/products/:id", (req, res, next) ->
+	app.put "/#{BASE_URL}/:id", (req, res, next) ->
 
 		id 	 = helper.toObjectId req.params.id
 		data = req.body
@@ -182,7 +193,7 @@ module.exports = (params) ->
 	|	Last update	: 23 Jan 2016 by Aulia
 	###
 
-	app.delete "/products/:id", (req, res, next) ->
+	app.delete "/#{BASE_URL}/:id", (req, res, next) ->
 		
 		query =
 			_id: helper.toObjectId req.params.id
